@@ -21,9 +21,11 @@
 - (void) setBalance:(int)b {
     
     int setBalance = b;
+    
+    printf("The current balance of this account is %d", b);
 }
 - (void) increaseMoneyB:(int)i {
-    [[self Patron] decreaseMoneyP];
+
 }
 - (void) decreaseMoneyB:(int)d {
     
@@ -44,6 +46,7 @@
 @end
 
 @implementation Patron {
+    
     BankAccount *bankAccount;
 }
 
@@ -65,9 +68,11 @@
     
     NSString *setName = n;
 }
+
 - (void) increaseMoneyP:(int)x {
     
 }
+
 - (void) decreaseMoneyP:(int)y {
 }
 
