@@ -11,6 +11,8 @@
 @interface BankAccount : NSObject
 
 - (void) setBalance:(int)b;
+- (void) increaseMoneyB:(int)i;
+- (void) decreaseMoneyB:(int)d;
 
 @end
 
@@ -19,6 +21,12 @@
 - (void) setBalance:(int)b {
     
     int setBalance = b;
+}
+- (void) increaseMoneyB:(int)i {
+    [[self Patron] decreaseMoneyP];
+}
+- (void) decreaseMoneyB:(int)d {
+    
 }
 
 @end
@@ -29,11 +37,19 @@
 - (void) setAccountBalance:(int)a;
 - (void) setPocket:(int)p;
 - (void) setName:(NSString*)n;
-
+- (void) increaseMoneyP:(int)x;
+- (void) decreaseMoneyP:(int)y;
+- (void)setBankAccount: (BankAccount*)b;
 
 @end
 
-@implementation Patron
+@implementation Patron {
+    BankAccount *bankAccount;
+}
+
+- (void)setBankAccount: (BankAccount*)b {
+    
+}
 
 - (void) setAccountBalance:(int)a {
     
@@ -49,7 +65,11 @@
     
     NSString *setName = n;
 }
-
+- (void) increaseMoneyP:(int)x {
+    
+}
+- (void) decreaseMoneyP:(int)y {
+}
 
 @end
 
@@ -64,6 +84,7 @@ int main(int argc, const char * argv[]) {
         [pat setAccountBalance:20];
         [pat setPocket:5];
         [pat setName:@"Chris"];
+        [pat setBankAccount:bank];
     }
     return 0;
 }
