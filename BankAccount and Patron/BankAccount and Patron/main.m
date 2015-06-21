@@ -37,12 +37,13 @@
     
     NSLog(@"The current balance of this account is %d.", balance);
 }
+
 - (void) increaseMoneyB:(int)i {
     
     balance = balance = i;
 
-
 }
+
 - (void) decreaseMoneyB:(int)d {
     
     balance = balance - d;
@@ -55,7 +56,6 @@
 
 @interface Patron : NSObject
 
-- (void) setAccountBalance:(int)a;
 - (void) setPocket:(int)p;
 - (void) setName:(NSString*)n;
 - (void) increaseMoneyP:(int)x;
@@ -98,6 +98,8 @@
 - (void) decreaseMoneyP:(int)y {
     
     pocket = pocket - y;
+    
+    [bankAccount increaseMoneyB:y];
     
     
 }
