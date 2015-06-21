@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>62BB1EF5-A7C5-4550-A782-67D20659F2D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CABF056BC08916CA04ED74CD338FDA4B41C40030</key>
+		<string>https://github.com/ddistant/Daniel-Artur-ClassObject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BankAccount and Patron/BankAccount and Patron.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CABF056BC08916CA04ED74CD338FDA4B41C40030</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ddistant/Daniel-Artur-ClassObject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CABF056BC08916CA04ED74CD338FDA4B41C40030</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CABF056BC08916CA04ED74CD338FDA4B41C40030</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Daniel-Artur-ClassObject</string>
+		</dict>
+	</array>
+</dict>
+</plist>
