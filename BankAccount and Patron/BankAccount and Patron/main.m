@@ -11,25 +11,44 @@
 @interface BankAccount : NSObject
 
 - (void) setBalance:(int)b;
+- (int) balance;
 - (void) increaseMoneyB:(int)i;
 - (void) decreaseMoneyB:(int)d;
+- (void) showBalance;
 
 @end
 
-@implementation BankAccount
+@implementation BankAccount {
+    
+    int balance;
+}
 
-- (void) setBalance:(int)b {
+- (void) setBalance:(int)a {
     
-    int setBalance = b;
+    balance = a;
+}
+
+- (int) balance {
     
-    printf("The current balance of this account is %d", b);
+    return balance;
+}
+
+- (void) showBalance {
+    
+    NSLog(@"The current balance of this account is %d.", balance);
 }
 - (void) increaseMoneyB:(int)i {
+    
+    balance = balance = i;
+
 
 }
 - (void) decreaseMoneyB:(int)d {
     
+    balance = balance - d;
+    
 }
+
 
 @end
 
@@ -41,55 +60,74 @@
 - (void) setName:(NSString*)n;
 - (void) increaseMoneyP:(int)x;
 - (void) decreaseMoneyP:(int)y;
-- (void)setBankAccount: (BankAccount*)b;
+- (void) setBankAccount: (BankAccount*)b;
+- (void) showBalance;
 
 @end
 
 @implementation Patron {
     
     BankAccount *bankAccount;
+    int pocket;
+    NSString *name;
+    
 }
 
 - (void)setBankAccount: (BankAccount*)b {
     
-}
-
-- (void) setAccountBalance:(int)a {
+    bankAccount = b;
     
-    int setAccountBalance = a;
 }
 
 - (void) setPocket:(int)p {
-    
-    int setPocket = p;
+    pocket = p;
 }
 
 - (void) setName:(NSString*)n {
-    
-    NSString *setName = n;
+    name = n;
 }
 
 - (void) increaseMoneyP:(int)x {
     
+    pocket = pocket + x;
+    
+    [bankAccount decreaseMoneyB:x];
+    
 }
 
 - (void) decreaseMoneyP:(int)y {
+    
+    pocket = pocket - y;
+    
+    
 }
 
+- (void) showBalance {
+    
+    NSLog(@"Your current pocket is %d.", pocket);
+    NSLog(@"Your current bank balance is %d", [bankAccount balance]);
+}
 @end
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
-        BankAccount *bank = [[BankAccount alloc] init];
-        [bank setBalance:100];
+        BankAccount *account = [[BankAccount alloc] init];
+        [account setBalance:150];
+        [account showBalance];
         
         Patron *pat = [[Patron alloc] init];
-        [pat setAccountBalance:20];
         [pat setPocket:5];
         [pat setName:@"Chris"];
-        [pat setBankAccount:bank];
+        [pat setBankAccount:account];
+        [pat showBalance];
+        
+        NSLog(@"Chris takes out $50.");
+        
+        [pat increaseMoneyP:50];
+        [pat showBalance];
+        
     }
     return 0;
 }
